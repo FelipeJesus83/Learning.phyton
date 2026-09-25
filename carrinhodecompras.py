@@ -38,7 +38,7 @@ if len(carrinho) > 0:
 else:
     print('Seu carrinho está vazio')
 
-
+sair = input('Deseja sair? (Sim = 1)(Não = Não responda)')
 
 
 

@@ -81,3 +81,9 @@ if devendo > 1000:
 
     else:
         print('Opção invalida')
+
+sair = input('Você deseja sair do sistema? (Sim = 1 )(Não = não responda)')
+
+if sair == 1:
+    print('Você saiu!')
+
