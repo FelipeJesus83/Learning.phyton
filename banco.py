@@ -4,6 +4,7 @@ print('==========')
 print('Saldo ')
 print('Investimentos ')
 print('Dividas ')
+print('Historico')
 print('==========')
 
 def verificar_email(email):
@@ -15,14 +16,9 @@ def verificar_email(email):
 email = input('Digite seu email: ').lower().strip()
 ver_email = verificar_email(email)
 
-# 1000 no saldo 200 investido = pouco investimento
- 
 saldo = float(input('Digite seu saldo:'))
 print(f'O seu saldo e de {saldo}')
 investimentos = float(input('Quanto você tem investido: '))
-yes = ['sim']
-nao = ['não']
-no = ['nao']
 
 def investimentos_de_acordo_saldo(saldo, investimentos):
     if investimentos > saldo:
@@ -42,6 +38,7 @@ def investimentos_de_acordo_saldo(saldo, investimentos):
 investimentos_de_acordo_saldo(saldo, investimentos)
 
 dividas = int(input('Quanto você está devendo: '))
+
 def calculo_dividas(dividas, saldo):
     if dividas > (saldo * 2 ):
       print('Suas dividas sao o dobro')
@@ -57,7 +54,20 @@ def calculo_dividas(dividas, saldo):
           print('Opção inválida')
 
 calculo_dividas(dividas, saldo)
-   
+
+historico = []
+
+def registrar_transacao(invest, sal, div):
+    historico.append(f'Investimentos: {invest}')
+    historico.append(f'Saldo: {sal}')
+    historico.append(f'Dívidas: {div}')
+
+def mostrar_historico():
+    for transacao in historico:
+        print(transacao)
+
+registrar_transacao(investimentos, saldo, dividas)
+mostrar_historico()
 
 
 
